@@ -1,0 +1,75 @@
+.gallery img{
+    max-width: 100%;
+}
+
+.gallery{
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    display: block !important;
+}
+.gallery .gallery-item {
+    position: absolute;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.5s;
+}
+
+.gallery .gallery-item.current{
+    opacity: 1;
+    filter:blur(0px);
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?z35pi9');
+    src: url('../fonts/icomoon.eot?z35pi9#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?z35pi9') format('truetype'),
+        url('../fonts/icomoon.woff?z35pi9') format('woff'),
+        url('../fonts/icomoon.svg?z35pi9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: black;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 50px;
+}
+
+.icon-arrow-right:before {
+    right: 0;
+    top: 50%;
+    position: absolute;
+    content: "\ea34";
+}
+
+.icon-arrow-left:before {
+    left: 0;
+    top: 50%;
+    position: absolute;
+    content: "\ea38";
+}
+
+#box_img {
+  display: flex;
+}
+
+#box_img img{
+    width: 50%;
+}
+
+#box_img img:hover {
+    opacity: 0.8;
+}
